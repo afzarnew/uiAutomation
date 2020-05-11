@@ -19,9 +19,11 @@ public class CartPage extends DashboardPage {
     private By buttonCheckOut = By.xpath("(//BUTTON[@type='button'])[4]");
     private By buttonContinue = By.xpath("(//*[@class=\"button -primary -expanded\"])[1]");
     private By firstName = By.xpath("(//*[@class=\"input-text\"])[1]");
+    private By itemNameFromList = By.xpath("//*[@class=\"base\"]");
+    private By itemPriceFromList = By.xpath("(//*[@class=\"price\"])[3]");
 
-    public void removeItem() throws InterruptedException {
-        syscoLabUI.waitTillElementLoaded(removeButton);
+    public void removeItem() {
+        syscoLabUI.sleep(2);
         boolean i = (syscoLabUI.isDisplayed(removeButton));
         System.out.print(i);
         while (i==true) {
@@ -53,6 +55,16 @@ public class CartPage extends DashboardPage {
     public String getItemName(){
         syscoLabUI.waitTillElementLoaded(itemName);
         return syscoLabUI.getText(itemName);
+    }
+
+    public String getItemNameFromList(){
+        syscoLabUI.waitTillElementLoaded(itemNameFromList);
+        return syscoLabUI.getText(itemNameFromList);
+    }
+
+    public String getItemPriceFromList(){
+        syscoLabUI.waitTillElementLoaded(itemPriceFromList);
+        return syscoLabUI.getText(itemPriceFromList);
     }
 
     public String getItemPrice(){

@@ -6,11 +6,11 @@ public class Cart {
 
     static CartPage cartPage=new CartPage();
 
-    public static void removeItem() throws InterruptedException {
+    public static void removeItem() {
         cartPage.removeItem();
     }
 
-    public static void clickCheckOut() throws InterruptedException {
+    public static void clickCheckOut() {
         cartPage.clickCheckOut();
     }
 
@@ -18,7 +18,7 @@ public class Cart {
         cartPage.clickContinue();
     }
 
-    public static void addItem() throws InterruptedException {
+    public static void addItem() {
         cartPage.addItem();
     }
 
@@ -28,6 +28,14 @@ public class Cart {
 
     public  static String getItemName(){
         return cartPage.getItemName();
+    }
+
+    public  static String getItemNameFromList(){
+        return cartPage.getItemNameFromList();
+    }
+
+    public  static String getItemPriceFromList(){
+        return cartPage.getItemPriceFromList();
     }
 
     public  static String getItemPrice(){

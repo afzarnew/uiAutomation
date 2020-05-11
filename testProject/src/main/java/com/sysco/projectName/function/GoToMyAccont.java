@@ -29,8 +29,8 @@ public class GoToMyAccont {
         return homePage.errorMessageForInvalidEmail();
     }
 
-    public  static String errorMessageForEmptyPassowrd(){
-        return homePage.errorMessageForEmptyPassowrd();
+    public  static String errorMessageForEmptyPassword(){
+        return homePage.errorMessageForEmptyPassword();
     }
 
     public static void quitDriver(){

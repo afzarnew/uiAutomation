@@ -45,7 +45,7 @@ public class HomePage {
         return syscoLabUI.getText(errorMessageForInvalidEmail);
     }
 
-    public String errorMessageForEmptyPassowrd(){
+    public String errorMessageForEmptyPassword(){
         return syscoLabUI.getText(errorMessageForEmptyPassowrd);
     }
 
